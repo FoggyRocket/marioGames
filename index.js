@@ -109,7 +109,7 @@ class Enemi{
         this.height = 80;
         //imagen
         this.image = new Image();
-        this.image.src = "https://image.pngaaa.com/893/380893-middle.png";
+        this.image.src ="https://bit.ly/2L7yH3f" //"https://image.pngaaa.com/893/380893-middle.png";
     }
 
     draw(){
