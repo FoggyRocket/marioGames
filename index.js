@@ -9,6 +9,7 @@ contadores....
 
 let frames  = 0
 let requestID;
+let points = 0
 //esto es para reforzar como cargar una imagen al canvas
 /*
 const img = new Image() //instancio un class Image en una variable
@@ -169,7 +170,8 @@ function update(){
     mario.draw()
     generateEnemies()
     drawEnemies()
-
+    ctx.font = "30px Arial"
+    ctx.fillText(points,350,80)
     if(requestID){
        requestID =  requestAnimationFrame(update)
     }
@@ -226,7 +228,7 @@ function drawEnemies(){
             if(bullet.collision(enemy)){
                 enemies.splice(index_enemy,1)
                 bullets.splice(index_bullet,1)
-
+             points += 10
             }
             if(bullet.x+bullet.width > canvas.width){
                 bullets.splice(index_bullet,1)
